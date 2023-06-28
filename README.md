@@ -16,8 +16,7 @@
 
 1. 如果你觉得对你有帮助，可以请我杯咖啡
 
-![alipay qrcode](./misc//20230628-101633.jpeg)
-
+<img src="./misc//20230628-101633.jpeg" alt="Image" width="400" height="210">
 
 ### License
 
