@@ -31,12 +31,6 @@
 - [ ] 增加一键 block 功能
 - [ ] 其他
 
-### Buy me a coffee
-
-1. 如果你觉得对你有帮助，可以请我喝杯咖啡
-
-<img src="./misc//20230628-101633.jpeg" alt="Image" width="300" height="450">
-
 ### License
 
 MIT
