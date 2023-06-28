@@ -16,6 +16,7 @@
 ### 效果
 
 目前一定得自己装了插件才有用。黄推用 opacity: 0 进行隐藏。效果如下
+具体可以拿 https://twitter.com/abskoop/status/1673960105140707329 检测下
 
 <img src="./misc/demo.png" alt="Image" width="300" height="400">
 

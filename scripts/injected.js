@@ -60,10 +60,10 @@ function parseTwitterResponserInfo(response) {
       isPorn,
       field,
     };
-    if (user.isPorn) {
-      console.log("user is isPorn::", user.screen_name, user);
-    }
-    console.log("user info::", user.screen_name, user.isPorn);
+    // if (user.isPorn) {
+    //   console.log("user is isPorn::", user.screen_name, user);
+    // }
+    // console.log("user info::", user.screen_name, user.isPorn);
     return user;
   });
   return userInfo;
@@ -97,11 +97,11 @@ function hijackXHR() {
           } else {
             responseBody = this.response;
           }
-          // DONE. can hack response.
+          // just hijack TweetDetail API
+          console.log("TweetDetail==>");
+
           if (url.includes("TweetDetail")) {
             const responserInfo = parseTwitterResponserInfo(responseBody);
-            // 这里的时机肯定先于 dom 展示
-            // console.log("responserInfo==>", responserInfo);
             const pornList = responserInfo.filter((item) => item.isPorn);
 
             let list = localStorage.getItem("twitter_responser_list")
@@ -112,9 +112,7 @@ function hijackXHR() {
               // 防止数据过大
               list = [];
             }
-            // 去重
             const newList = mergeAndUnique(list, pornList);
-
             localStorage.setItem("twitter_responser_list", JSON.stringify(newList));
           }
         }
