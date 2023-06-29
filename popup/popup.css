@@ -1,0 +1,87 @@
+.block-porn-body {
+  display: block;
+  min-width: 600px;
+  padding: 20px;
+}
+
+.raw-button {
+  border-radius: 4px;
+  color: white;
+  outline: none;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  appearance: none;
+  border: 1px solid transparent;
+  border-shadow: 0 2px 0 rgba(255, 38, 5, 0.06);
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.primary-button {
+  background-color: #1677ff;
+}
+
+.primary-button:hover {
+  background-color: #4096ff;
+}
+
+.secondary-button {
+  margin-left: 12px;
+  padding: 6px 8px;
+  font-size: 14px;
+  background-color: #fff;
+  border-color: #d9d9d9;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.secondary-button:hover {
+  color: #4096ff;
+  border-color: #4096ff;
+}
+
+.danger-button {
+  background-color: #ff4d4f;
+}
+
+.danger-button:hover {
+  background-color: #ff7875;
+}
+
+.mw-88 {
+  width: 88px;
+}
+
+#block-porn-user-list {
+  margin-top: 16px;
+
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mw-88 {
+  min-width: 88px;
+}
+
+.user-content {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.88);
+
+  margin-bottom: 8px;
+}
