@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Block Pornographic Replies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    textarea {
+      resize: none;
+      padding: 10px;
+      height: 200px;
+      font-size: 14px;
+    }
+    #saveButton {
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <h1>Keywords:</h1>
+    <textarea type="text" class=".container" id="keywords"></textarea>
+  <button id="saveButton">Save</button>
+</div>
+  <script src="scripts/sync_keywords.js"></script>
+</body>
+</html>
