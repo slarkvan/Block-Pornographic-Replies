@@ -34,9 +34,7 @@ function parseTwitterResponserInfo(response) {
 
   const userInfo = resultList.map((result) => {
     const full_text = result.legacy.full_text;
-    const description = result.core.user_results.result.legacy.description;
-    const name = result.core.user_results.result.legacy.name; // 前面的中文名
-    const screen_name = result.core.user_results.result.legacy.screen_name; // 后面的英文名
+    const { description, name, screen_name } = core.user_results.result.legacy;
     let isPorn = false;
     let field = "";
     if (isPornography(full_text)) {
@@ -52,7 +50,7 @@ function parseTwitterResponserInfo(response) {
       isPorn = true;
       field = "screen_name";
     }
-    const user = {
+    return {
       full_text,
       description,
       name,
@@ -60,11 +58,6 @@ function parseTwitterResponserInfo(response) {
       isPorn,
       field,
     };
-    // if (user.isPorn) {
-    //   console.log("user is isPorn::", user.screen_name, user);
-    // }
-    // console.log("user info::", user.screen_name, user.isPorn);
-    return user;
   });
   return userInfo;
 }
