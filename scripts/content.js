@@ -132,6 +132,10 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     removeUserFromPornList(user);
     addUserIntoWhiteList(user);
   }
+
+  if (message.messageType === "resetApp") {
+    resetApp();
+  }
 });
 
 function getCookie(key) {
@@ -201,4 +205,8 @@ function addUserIntoWhiteList(user) {
     list.push(user);
   }
   localStorage.setItem("twitter_responser_whitelist", JSON.stringify(list));
+}
+
+function resetApp() {
+  localStorage.removeItem("twitter_responser_porn_list");
 }

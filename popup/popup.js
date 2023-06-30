@@ -66,7 +66,17 @@ function getLatestPornListHandler() {
   });
 }
 
+function resetHandler() {
+  const blockUserList = document.getElementById("block-porn-user-list");
+  blockUserList.innerHTML = "已重置，刷新页面后生效";
+  chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+    var activeTab = tabs[0];
+    chrome.tabs.sendMessage(activeTab.id, { messageType: "resetApp" });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("block-porn-refresh-btn").addEventListener("click", getLatestPornListHandler);
   document.getElementById("block-porn-block-btn").addEventListener("click", blockHandler);
+  document.getElementById("block-porn-reset-btn").addEventListener("click", resetHandler);
 });

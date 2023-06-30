@@ -62,7 +62,8 @@
 #block-porn-user-list {
   margin-top: 16px;
 
-  max-height: 300px;
+  min-height: 240px;
+  max-height: 480px;
   overflow-y: scroll;
 }
 
@@ -70,6 +71,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 8px;
 }
 
 .mw-88 {
