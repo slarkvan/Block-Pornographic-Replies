@@ -13,7 +13,7 @@ function renderUserList(list, callback) {
 
     const contentNode = document.createElement("div");
     contentNode.classList.add("user-content");
-    contentNode.innerHTML = `${user.name}@${user.screen_name}<br />简介:${user.description}`;
+    contentNode.innerHTML = `${user.name}<a href="https://twitter.com/${user.screen_name}">@${user.screen_name}</a><br />简介:${user.description}`;
 
     const releaseNode = document.createElement("div");
     releaseNode.classList.add("raw-button", "secondary-button", "mw-88");
