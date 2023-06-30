@@ -1,28 +1,3 @@
-function deepCloneArray(array) {
-  const clonedArray = [];
-
-  for (let item of array) {
-    const clonedItem = deepCloneObject(item);
-    clonedArray.push(clonedItem);
-  }
-
-  return clonedArray;
-}
-
-function deepCloneObject(object) {
-  let clonedObject = {};
-
-  for (let key in object) {
-    if (typeof object[key] === "object" && object[key] !== null) {
-      clonedObject[key] = deepCloneObject(object[key]);
-    } else {
-      clonedObject[key] = object[key];
-    }
-  }
-
-  return clonedObject;
-}
-
 function mergeAndUnique(arr1, arr2) {
   const arr = [...arr1, ...arr2];
 
@@ -54,12 +29,10 @@ function parseTwitterResponserInfo(response) {
   const entries = response.data.threaded_conversation_with_injections_v2.instructions[0].entries;
   // 目前存在解析不了的情况
   const conversationEntries = entries.filter((entry) => entry.entryId.includes("conversationthread-"));
-  const rawResultList = conversationEntries.map((entry) => {
+  const resultList = conversationEntries.map((entry) => {
     const result = entry.content.items[0].item.itemContent.tweet_results.result;
     return result;
   });
-
-  const resultList = deepCloneArray(rawResultList);
 
   const userInfo = resultList
     .map((result) => {
