@@ -84,19 +84,16 @@ function hijackXHR() {
   const setRequestHeader = XHR.setRequestHeader;
 
   XHR.open = function () {
-    this._requestHeaders = {};
     return open.apply(this, arguments);
   };
 
-  XHR.setRequestHeader = function (header, value) {
-    this._requestHeaders[header] = value;
+  XHR.setRequestHeader = function () {
     return setRequestHeader.apply(this, arguments);
   };
 
   XHR.send = function () {
     this.addEventListener("load", function () {
       const url = this.responseURL;
-      // const responseHeaders = this.getAllResponseHeaders();
       try {
         if (this.responseType != "blob") {
           let responseBody;
