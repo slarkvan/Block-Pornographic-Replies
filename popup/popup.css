@@ -79,8 +79,6 @@
 }
 
 .user-content {
-  display: flex;
-  justify-content: flex-start;
   font-size: 13px;
   line-height: 1.45;
   color: rgba(0, 0, 0, 0.88);
