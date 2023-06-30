@@ -35,6 +35,8 @@
 
 - [ ] 增加 on/off 配置
 - [x] 增加一键 block 功能
+- [ ] 适配 firefox 浏览器
+- [ ] 进入 Store
 - [ ] 其他
 
 ### 欢迎 PR
