@@ -37,7 +37,6 @@ function nodeHandler(node, way) {
       const name = extractUsername(firstElement.getAttribute("data-testid"));
       const [isPorn, user] = checkUserIsPorn(name);
       if (isPorn) {
-        console.log("[user]:", user, "isPorn:", isPorn, "so we add css to hide it.");
         if (node && node.classList && !node.classList.contains("blocked-of-porn")) {
           node.classList.add("blocked-of-porn");
           node.setAttribute("data-user-tag", "porn");
