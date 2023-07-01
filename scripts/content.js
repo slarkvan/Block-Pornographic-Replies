@@ -136,6 +136,13 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   if (message.messageType === "resetApp") {
     resetApp();
   }
+
+  if (message.messageType === "blockOneUser") {
+    const user = message.user;
+    if (user.restId) {
+      batchBlockPornUserList([user.restId]);
+    }
+  }
 });
 
 function getCookie(key) {

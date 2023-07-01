@@ -34,12 +34,16 @@
 }
 
 .secondary-button {
-  margin-left: 12px;
   padding: 6px 8px;
   font-size: 14px;
   background-color: #fff;
   border-color: #d9d9d9;
   color: rgba(0, 0, 0, 0.88);
+}
+
+.small-button {
+  padding: 6px 8px;
+  font-size: 14px;
 }
 
 .secondary-button:hover {
@@ -69,9 +73,26 @@
 
 .user-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding-right: 8px;
+  margin-top: 8px;
+}
+
+.avatar-wrap {
+  max-width: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  min-height: 40px;
+  margin-right: 6px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .mw-88 {
@@ -80,10 +101,23 @@
 
 .user-content {
   display: flex;
+  flex-direction: column;
+  word-break: break-all;
   justify-content: flex-start;
   font-size: 13px;
   line-height: 1.45;
   color: rgba(0, 0, 0, 0.88);
 
   margin-bottom: 8px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  gap: 12px;
+}
+
+.mt-2 {
+  margin-top: 2px;
 }
