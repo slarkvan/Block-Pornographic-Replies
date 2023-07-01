@@ -33,8 +33,6 @@ function parseTwitterResponserInfo(response) {
     return result;
   });
 
-  console.log("resultList==>", resultList);
-
   const userInfo = resultList
     .map((result) => {
       // "TweetWithVisibilityResults" | "Tweet"
@@ -92,8 +90,6 @@ function parseTwitterResponserInfo(response) {
       return user;
     })
     .filter(Boolean);
-
-  console.log("userInfo==>", userInfo);
 
   return userInfo;
 }
