@@ -50,7 +50,12 @@
 - [ ] 其他
 
 ### 欢迎 PR
+
 1. 想 PR 前，可以现在 discuss or issue 大概说下要做的内容
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=slarkvan/Block-Pornographic-Replies&type=Date)](https://star-history.com/#slarkvan/Block-Pornographic-Replies&Date)
 
 ### License
 
