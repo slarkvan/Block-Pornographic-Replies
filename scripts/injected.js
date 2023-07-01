@@ -33,12 +33,15 @@ function parseTwitterResponserInfo(response) {
     return result;
   });
 
+  console.log("resultList==>", resultList);
+
   const userInfo = resultList
     .map((result) => {
       // "TweetWithVisibilityResults" | "Tweet"
       if (result.__typename !== "Tweet") return;
 
       const full_text = result.legacy.full_text;
+      const following = result.core.user_results.result.legacy.following;
       const description = result.core.user_results.result.legacy.description;
       const name = result.core.user_results.result.legacy.name;
       const screen_name = result.core.user_results.result.legacy.screen_name;
@@ -70,6 +73,11 @@ function parseTwitterResponserInfo(response) {
         isPorn = false;
       }
 
+      // `user` who you are `following`
+      if (following) {
+        isPorn = false;
+      }
+
       const user = {
         full_text,
         description,
@@ -84,6 +92,8 @@ function parseTwitterResponserInfo(response) {
       return user;
     })
     .filter(Boolean);
+
+  console.log("userInfo==>", userInfo);
 
   return userInfo;
 }
