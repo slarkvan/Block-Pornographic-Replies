@@ -8,9 +8,11 @@
 
 ## 使用方式
 
-1. 进入 [chrome://extensions/](chrome://extensions/)，打开「开发者模式」
+1. ~~进入 [chrome://extensions/](chrome://extensions/)，打开「开发者模式」~~
 
-2. 把代码包下载解压拖到里面即可
+2. ~~把代码包下载解压拖到里面即可~~
+
+目前已进入 Chrome web Store。[插件下载地址✨✨✨](https://chrome.google.com/webstore/detail/block-pornographic-replie/cdmilcmdgajfnplkcpgdckdgjadkgkhn)
 
 ## 效果
 
