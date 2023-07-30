@@ -6,6 +6,14 @@
 
 1. 隐私优先。本插件纯客户端代码，无服务端 api 或前端监控等设计
 
+## 如何自定义【关键词】
+
+1. download zip 包，并解压
+
+2. 在 https://github.com/slarkvan/Block-Pornographic-Replies/blob/ae8615b5c140a73da1c5585ecef664421ec9409a/scripts/injected.js#L18 处里增加或删除关键词
+
+3. 进入 [chrome://extensions/](chrome://extensions/)，打开「开发者模式」，把项目拖进去即可(如果之前有插件了，删掉即可)
+
 ## 使用方式
 
 1. ~~进入 [chrome://extensions/](chrome://extensions/)，打开「开发者模式」~~
